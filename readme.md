@@ -30,26 +30,30 @@ In our case, we want to use the GET method.
 
 When using a POST method with a valid JSON it returns 
 another JSON with our task ID, eg. when given
+```
 {
 	"title": "Conquer the world",
 	"done": false
 }
+```
 returns
+```
 {
 	"task_id": 5
 }
+```
 
 ### Patching entries
 
 We can also patch entries. To do that, we have to
 access /todolist/<id_of_task> address with a PATCH method,
 and of course JSON with values we want to patch. Eg.
-
+```
 PATCH '/todolist/2'
 {
 	"done":true
 }
-
+```
 changes the value of second entry to "done".
 
 ### Getting metadata
@@ -58,14 +62,14 @@ We can also access metadata associated with given entry
 using /todolist/<id_of_task> with GET method. It returns JSON
 containing title, status, ip of author, and creation date
 (example below)
-
+```
 {
  "title": "Learn even more Python",
  "done": false,
  "author_ip": "123.45.67.89",
  "created_date": "2018-05-08 10:00:00",
 }
-
+```
 ### Googling
 
 We can also google things from our website using
