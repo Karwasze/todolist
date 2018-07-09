@@ -13,9 +13,9 @@ Required modules are listed in requirements.txt
 
 ### Setting up application
 
-```python
-\$ export FLASK_APP=todolist.py
-\$ flask run
+```console
+$ export FLASK_APP=todolist.py
+$ flask run
 ```
 
 ### Getting list of entries
